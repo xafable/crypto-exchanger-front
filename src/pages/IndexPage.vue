@@ -150,7 +150,20 @@
               <p class="text-h5">We are always happy to help our clients!</p>
               <p>Are you left with any questions or faced any troubles while using our service, please let us know!
                 Contact our support we will do our best to help you!</p>
+
+              <div class="row"><q-icon name="email" size="34px" />
+                <p class="text-h6">&nbsp;Email: <a href="http://localhost">dsdsddsdsd.com</a></p>
+              </div>
+              <br>
+
+              <div class="row"><q-icon name="fa-brands fa-telegram" size="34px" />
+                <p class="text-h6">&nbsp;Telegram: <a href="http://localhost">@dsdsddsdsd</a></p>
+              </div>
+
+
             </div>
+
+
 
           </div>
 

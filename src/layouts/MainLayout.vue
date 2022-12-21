@@ -36,6 +36,52 @@
       <router-view />
     </q-page-container>
 
+    <div class="bg-dark text-white">
+
+      <div class="row justify-center">
+        <div class="col-4">
+
+
+          <q-list dense bordered padding class="rounded-borders">
+            <q-item  v-ripple>
+              <q-item-section>
+                <p class="text-h5">SERVICES</p>
+              </q-item-section>
+            </q-item>
+
+            <q-item  v-ripple>
+              <q-item-section>
+                <q-btn stretch flat label="Home" />
+              </q-item-section>
+            </q-item>
+
+            <q-item  v-ripple>
+              <q-item-section>
+                <q-btn  stretch flat label="Our coins" />
+              </q-item-section>
+            </q-item>
+
+            <q-item  v-ripple>
+              <q-item-section>
+                <q-btn  stretch flat label="Reviews" />
+              </q-item-section>
+            </q-item>
+
+            <q-item  v-ripple>
+              <q-item-section>
+                <q-btn  stretch flat label="Contact" />
+              </q-item-section>
+            </q-item>
+          </q-list>
+        </div>
+        <div class="col-4">
+          One of two cols
+        </div>
+      </div>
+
+
+    </div>
+
 
 
   </q-layout>
