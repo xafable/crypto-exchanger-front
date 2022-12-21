@@ -113,10 +113,48 @@
     </div>
 
 
-    <div style="background-color: #1D1D1D;height: 500px; margin-top: 150px">
+    <div style="background-color: #1D1D1D;margin-top: 150px">
       <div class="c-container">
+        <FeedbackSlider></FeedbackSlider>
+
+          <div class="column items-center" style="padding-bottom: 100px;">
+            <div class="col">
+              <q-btn rounded color="secondary" label="Send feedback" />
+            </div>
+          </div>
+      </div>
+    </div>
 
 
+    <div style="background-color: #ffffff;position: relative;margin-top: 200px">
+      <div class="c-container">
+        <div class="row" style="padding-top: 50px">
+
+          <div class="col-6">
+
+            <p class="text-h5 text-black">Your name:</p>
+            <q-input
+              color="secondary"
+              v-model="text" label="name" />
+            <br><br>
+            <p class="text-h5 text-black">Email or mobile:</p>
+            <q-input
+              color="secondary"
+              v-model="text" label="email or mobile" />
+            <q-btn rounded color="secondary" label="Contact with me"  size="20px" style="margin-top: 40px"/>
+
+          </div>
+
+          <div class="col-6">
+            <div style="margin-left: 20%">
+              <p class="text-h5">We are always happy to help our clients!</p>
+              <p>Are you left with any questions or faced any troubles while using our service, please let us know!
+                Contact our support we will do our best to help you!</p>
+            </div>
+
+          </div>
+
+        </div>
       </div>
     </div>
 
@@ -137,12 +175,14 @@
 import { defineComponent } from 'vue'
 import CryptoExchanger from "components/CryptoExchanger.vue";
 import CoinList from "components/CoinList.vue";
+import FeedbackSlider from "components/FeedbackSlider.vue";
 
 export default defineComponent({
   name: 'IndexPage',
   components: {
     CryptoExchanger,
-    CoinList
+    CoinList,
+    FeedbackSlider
   },
 })
 </script>

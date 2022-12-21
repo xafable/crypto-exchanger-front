@@ -2,10 +2,14 @@
   <div>
     <div class="row">
       <div class="col-8" >
-        <q-select  v-model="model" :options="options" label="Coin" />
+        <q-select
+          color="secondary"
+          v-model="model" :options="options" label="Coin" />
       </div>
       <div class="col-4">
-        <q-input  v-model="text" label="Amount" />
+        <q-input
+          color="secondary"
+          v-model="text" label="Amount" />
       </div>
     </div>
     <br>
@@ -16,19 +20,27 @@
     <br>
     <div class="row">
       <div class="col-8">
-        <q-select  v-model="model" :options="options" label="Coin" />
+        <q-select
+          color="secondary"
+          v-model="model" :options="options" label="Coin" />
       </div>
       <div class="col-4">
-        <q-input  v-model="text" label="Amount" />
+        <q-input
+          color="secondary"
+          v-model="text" label="Amount" />
       </div>
     </div>
 
     <br><br>
     <p class="text-h5 text-black">Crypto wallet address</p>
-    <q-input  v-model="text" label="Amount" />
+    <q-input
+      color="secondary"
+      v-model="text" label="wallet address" />
     <br><br>
     <p class="text-h5 text-black">Email for tracking the status of the application (optional)</p>
-    <q-input  v-model="text" label="Amount" />
+    <q-input
+      color="secondary"
+      v-model="text" label="email" />
   </div>
 
 
