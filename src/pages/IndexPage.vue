@@ -36,15 +36,7 @@
           <q-card dark bordered class="bg-secondary my-card">
             <q-card-section>
               <div class="text-h6">
-                <q-avatar
-                  key="md"
-                  size="md"
-                  color="primary"
-                  text-color="white"
-                  icon="directions"
-                />
                 Best exchange rate of crypto</div>
-
             </q-card-section>
             <q-separator dark inset />
             <q-card-section>
@@ -66,7 +58,7 @@
           <q-card dark bordered class="bg-secondary my-card">
             <q-card-section>
               <div class="text-h6">Protected exchange report</div>
-              <div class="text-subtitle2">by John Doe</div>
+              <div class="text-subtitle2"></div>
             </q-card-section>
             <q-separator dark inset />
             <q-card-section>
@@ -77,7 +69,7 @@
           <q-card dark bordered class="bg-secondary my-card">
             <q-card-section>
               <div class="text-h6">U-Swap Support 24/7</div>
-              <div class="text-subtitle2">by John Doe</div>
+              <div class="text-subtitle2"></div>
             </q-card-section>
             <q-separator dark inset />
             <q-card-section>
@@ -90,23 +82,52 @@
       </div>
     </div>
 
+
+
     <div style="background-color: #ffffff;position: relative;margin-top: 200px">
       <div class="c-container">
-        <div class="row justify-between" style="padding-top: 50px">
-            <div class="col-8">
-              <div class="row">
-                <q-select rounded outlined v-model="model" :options="options" label="Rounded outlined" />
-                <q-input rounded outlined v-model="text" label="Rounded outlined" />
+        <div class="row" style="padding-top: 50px">
+
+            <div class="col-6">
+            <div class="row" style="padding-top: 30px">
+              <p class="text-h2 text-black">Immediate crypto exchange</p>
+            </div>
+            <br><br>
+            <CryptoExchanger></CryptoExchanger>
+            </div>
+
+            <div class="col-6">
+              <br>
+              <div style="margin-left: 30%">
+                <p class="text-h2 text-black">Coin List</p>
+
+                <q-scroll-area style="height: 600px;">
+                  <CoinList></CoinList>
+                </q-scroll-area>
               </div>
 
             </div>
 
-          <div class="col-4">
-          </div>
         </div>
+      </div>
+    </div>
+
+
+    <div style="background-color: #1D1D1D;height: 500px; margin-top: 150px">
+      <div class="c-container">
+
 
       </div>
     </div>
+
+
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
 
 
   </q-page>
@@ -114,9 +135,15 @@
 
 <script>
 import { defineComponent } from 'vue'
+import CryptoExchanger from "components/CryptoExchanger.vue";
+import CoinList from "components/CoinList.vue";
 
 export default defineComponent({
-  name: 'IndexPage'
+  name: 'IndexPage',
+  components: {
+    CryptoExchanger,
+    CoinList
+  },
 })
 </script>
 <style scoped>
