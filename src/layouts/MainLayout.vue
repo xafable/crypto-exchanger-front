@@ -13,7 +13,7 @@
             />
           </div>
           <div class="col-6" style="padding-left: 15%">
-            <q-btn  stretch flat label="Home" />
+            <q-btn @click="$router.push('/')"  stretch flat label="Home" />
             <q-btn  stretch flat label="Our coins" />
             <q-btn  stretch flat label="Reviews" />
             <q-btn  stretch flat label="Contact" />
@@ -38,45 +38,93 @@
 
     <div class="bg-dark text-white">
 
-      <div class="row justify-center">
-        <div class="col-4">
+      <div class="bg-secondary" style="height: 10px"></div>
+
+      <div class="c-container">
 
 
-          <q-list dense bordered padding class="rounded-borders">
-            <q-item  v-ripple>
-              <q-item-section>
-                <p class="text-h5">SERVICES</p>
-              </q-item-section>
-            </q-item>
+        <div class="row">
+          <div class="col-1"></div>
+          <div class="col-4">
+            <p class="text-h4 text-white" style="text-align: center">Services</p>
 
-            <q-item  v-ripple>
-              <q-item-section>
-                <q-btn stretch flat label="Home" />
-              </q-item-section>
-            </q-item>
 
-            <q-item  v-ripple>
-              <q-item-section>
-                <q-btn  stretch flat label="Our coins" />
-              </q-item-section>
-            </q-item>
+            <q-list dense padding class="rounded-borders">
 
-            <q-item  v-ripple>
-              <q-item-section>
-                <q-btn  stretch flat label="Reviews" />
-              </q-item-section>
-            </q-item>
+              <q-item  v-ripple>
+                <q-item-section>
+                  <q-btn stretch flat label="Home" />
+                </q-item-section>
+              </q-item>
 
-            <q-item  v-ripple>
-              <q-item-section>
-                <q-btn  stretch flat label="Contact" />
-              </q-item-section>
-            </q-item>
-          </q-list>
+              <q-item  v-ripple>
+                <q-item-section>
+                  <q-btn  stretch flat label="Our coins" />
+                </q-item-section>
+              </q-item>
+
+              <q-item  v-ripple>
+                <q-item-section>
+                  <q-btn  stretch flat label="Reviews" />
+                </q-item-section>
+              </q-item>
+
+              <q-item  v-ripple>
+                <q-item-section>
+                  <q-btn  stretch flat label="Contact" />
+                </q-item-section>
+              </q-item>
+            </q-list>
+          </div>
+          <div class="col-4">
+            <p class="text-h4 text-white" style="text-align: center">Documents</p>
+
+
+            <q-list dense bordered padding class="rounded-borders">
+
+              <q-item  v-ripple>
+                <q-item-section>
+                  <q-btn stretch flat label="Privacy Policy" />
+                </q-item-section>
+              </q-item>
+
+              <q-item  v-ripple>
+                <q-item-section>
+                  <q-btn  stretch flat label="Terms of use" />
+                </q-item-section>
+              </q-item>
+
+              <q-item  v-ripple>
+                <q-item-section>
+                  <q-btn  stretch flat label="AML/KYC" />
+                </q-item-section>
+              </q-item>
+
+              <q-item  v-ripple>
+                <q-item-section>
+                  <q-btn  stretch flat label="Rules" />
+                </q-item-section>
+              </q-item>
+            </q-list>
+          </div>
+          <div class="col-3">
+            <p class="text-h4 text-white" style="text-align: center"> </p>
+
+            <div class="row">
+                <q-btn icon="fa-brands fa-telegram" color="white" stretch flat label="Telegram: @u-swap" />
+            </div>
+            <br>
+            <div class="row">
+              <q-btn icon="email" color="white" stretch flat label="Email: contact@u-swap.com" />
+            </div>
+
+            </div>
+
+
+
         </div>
-        <div class="col-4">
-          One of two cols
-        </div>
+
+
       </div>
 
 

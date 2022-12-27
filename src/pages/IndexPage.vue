@@ -19,9 +19,11 @@
               <q-btn rounded color="secondary" label="Change crypto" />
             </div>
             </transition>
+            <transition name="slide-2" appear>
             <div class="col-4">
               <img src="https://i.ibb.co/ZWDfRTJ/yyyyy7.png" style="height:100%; "/>
             </div>
+            </transition>
           </div>
 
         </div>
@@ -119,7 +121,7 @@
 
           <div class="column items-center" style="padding-bottom: 100px;">
             <div class="col">
-              <q-btn rounded color="secondary" label="Send feedback" />
+              <FeedbackSend @feedbackSended = "showNotification('Feedback sended')"></FeedbackSend>
             </div>
           </div>
       </div>
@@ -151,15 +153,13 @@
               <p>Are you left with any questions or faced any troubles while using our service, please let us know!
                 Contact our support we will do our best to help you!</p>
 
-              <div class="row"><q-icon name="email" size="34px" />
-                <p class="text-h6">&nbsp;Email: <a href="http://localhost">dsdsddsdsd.com</a></p>
+              <div class="row">
+                <q-btn size="20px" icon="fa-brands fa-telegram" color="black" stretch flat label="Telegram: @u-swap" />
               </div>
               <br>
-
-              <div class="row"><q-icon name="fa-brands fa-telegram" size="34px" />
-                <p class="text-h6">&nbsp;Telegram: <a href="http://localhost">@dsdsddsdsd</a></p>
+              <div class="row">
+                <q-btn size="20px" icon="email" color="black" stretch flat label="Email: contact@u-swap.com" />
               </div>
-
 
             </div>
 
@@ -186,17 +186,39 @@
 
 <script>
 import { defineComponent } from 'vue'
-import CryptoExchanger from "components/CryptoExchanger.vue";
-import CoinList from "components/CoinList.vue";
-import FeedbackSlider from "components/FeedbackSlider.vue";
+import { useQuasar } from 'quasar'
+import CryptoExchanger from "components/CryptoExchanger.vue"
+import CoinList from "components/CoinList.vue"
+import FeedbackSlider from "components/FeedbackSlider.vue"
+import FeedbackSend from "components/FeedbackSend.vue"
+
+
+
+
 
 export default defineComponent({
   name: 'IndexPage',
+  setup() {
+    const $q = useQuasar()
+
+    return {
+      $q
+    }
+  },
   components: {
     CryptoExchanger,
     CoinList,
-    FeedbackSlider
+    FeedbackSlider,
+    FeedbackSend,
   },
+  methods: {
+    showNotification(message){
+      this.$q.notify({
+        message: message,
+        color: 'secondary'
+      })
+    }
+  }
 })
 </script>
 <style scoped>
@@ -228,26 +250,22 @@ export default defineComponent({
 </style>
 
 <style lang="scss" scoped>
+
 .slide-enter {
   opacity: 0;
 }
-
 .slide-enter-active {
   animation: slide-in 1s ease-in forwards;
   transition: opacity .5s;
 }
-
 .slide-leave {
   // initial state set in keyframe
 }
-
 .slide-leave-active {
   animation: slide-out 1s ease-out forwards;
   opacity: 0;
   transition: opacity 1s;
 }
-
-
 @keyframes slide-in {
   from {
     transform: translateX(-1200px);
@@ -256,13 +274,45 @@ export default defineComponent({
     transform: translateX(0);
   }
 }
-
 @keyframes slide-out {
   from {
     transform: translateX(0);
   }
   to {
     transform: translateX(120px);
+  }
+}
+
+/////
+.slide-2-enter {
+  opacity: 0;
+}
+.slide-2-enter-active {
+  animation: slide-2-in 1.5s ease-in forwards;
+  transition: opacity .5s;
+}
+.slide-2-leave {
+  // initial state set in keyframe
+}
+.slide-2-leave-active {
+  animation: slide-2-out 1s ease-out forwards;
+  opacity: 0;
+  transition: opacity 1s;
+}
+@keyframes slide-2-in {
+  from {
+    transform: translateX(1400px);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+@keyframes slide-2-out {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-1020px);
   }
 }
 </style>
