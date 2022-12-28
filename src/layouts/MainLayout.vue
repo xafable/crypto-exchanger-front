@@ -158,7 +158,7 @@ export default defineComponent({
 </script>
 <style scoped>
 .c-q-tabs {
-  padding-right: 20%;
+  /*padding-right: 20%;*/
 }
 .c-container {
   margin-top: 15px;

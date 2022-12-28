@@ -4,7 +4,7 @@
 
       <div style="background-color: #1D1D1D;position: relative">
         <div class="c-container">
-          <div class="row justify-between" style="padding-top: 50px">
+          <div class="row justify-around" style="padding-top: 50px">
             <transition name="slide" appear>
             <div class="col-4">
               <div class="row" style="padding-top: 30px">
@@ -16,7 +16,7 @@
               <div class="row">
                 <p class="text-white">Fast processing. Low commissions. Best conditions. </p>
               </div>
-              <q-btn rounded color="secondary" label="Change crypto" />
+              <q-btn @click="scrollMeTo('exch')" rounded color="secondary" label="Change crypto" />
             </div>
             </transition>
             <transition name="slide-2" appear>
@@ -90,7 +90,7 @@
       <div class="c-container">
         <div class="row" style="padding-top: 50px">
 
-            <div class="col-6">
+            <div ref="exch" class="col-6">
             <div class="row" style="padding-top: 30px">
               <p class="text-h2 text-black">Immediate crypto exchange</p>
             </div>
@@ -217,6 +217,12 @@ export default defineComponent({
         message: message,
         color: 'secondary'
       })
+    },
+    scrollMeTo(refName) {
+      let element = this.$refs[refName];
+      let top = element.offsetTop;
+
+      window.scrollTo(0, top);
     }
   }
 })
@@ -246,6 +252,7 @@ export default defineComponent({
 .my-card
   width: 100%
   max-width: 250px
+  border-radius: 30px
 
 </style>
 

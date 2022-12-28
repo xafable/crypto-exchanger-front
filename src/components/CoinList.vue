@@ -29,7 +29,7 @@ export default {
   },
   methods: {
     async loadCoins(){
-      await fetch('http://exchanger-api/api/v1/coins/available',{
+      await fetch('https://exapi.vikarecept.com/api/v1/coins/available',{
         method: 'GET',
         headers: {
           'Accept': 'application/json',
