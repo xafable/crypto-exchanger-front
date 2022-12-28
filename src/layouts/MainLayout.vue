@@ -14,9 +14,9 @@
           </div>
           <div class="col-6" style="padding-left: 15%">
             <q-btn @click="$router.push('/')"  stretch flat label="Home" />
-            <q-btn  stretch flat label="Our coins" />
-            <q-btn  stretch flat label="Reviews" />
-            <q-btn  stretch flat label="Contact" />
+            <q-btn @click="$router.push('/#change')" stretch flat label="Our coins" />
+            <q-btn @click="$router.push('/#review')"  stretch flat label="Reviews" />
+            <q-btn @click="$router.push('/#contact')"  stretch flat label="Contact" />
 
           </div>
           <div class="col-2">
@@ -59,7 +59,7 @@
 
               <q-item  v-ripple>
                 <q-item-section>
-                  <q-btn  stretch flat label="Our coins" />
+                 <q-btn @click="$router.push('/#change')" stretch flat label="Our coins" />
                 </q-item-section>
               </q-item>
 

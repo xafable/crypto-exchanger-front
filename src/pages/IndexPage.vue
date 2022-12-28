@@ -86,7 +86,7 @@
 
 
 
-    <div style="background-color: #ffffff;position: relative;margin-top: 200px">
+    <div id="change" style="background-color: #ffffff;position: relative;margin-top: 200px">
       <div class="c-container">
         <div class="row" style="padding-top: 50px">
 
@@ -115,7 +115,7 @@
     </div>
 
 
-    <div style="background-color: #1D1D1D;margin-top: 150px">
+    <div id="review" style="background-color: #1D1D1D;margin-top: 150px">
       <div class="c-container">
         <FeedbackSlider></FeedbackSlider>
 
@@ -128,7 +128,7 @@
     </div>
 
 
-    <div style="background-color: #ffffff;position: relative;margin-top: 200px">
+    <div id="contact" style="background-color: #ffffff;position: relative;margin-top: 200px">
       <div class="c-container">
         <div class="row" style="padding-top: 50px">
 
@@ -217,12 +217,6 @@ export default defineComponent({
         message: message,
         color: 'secondary'
       })
-    },
-    scrollMeTo(refName) {
-      let element = this.$refs[refName];
-      let top = element.offsetTop;
-
-      window.scrollTo(0, top);
     }
   }
 })
