@@ -7,6 +7,7 @@
         <div class="row justify-between">
           <div class="col-4">
             <q-img
+              @click="imgClick"
               :src="'https://i.ibb.co/mR49B6K/Pngtree-simple-logo-vector-3174709.png'"
               spinner-color="white"
               style="height: 40px;width: 480px;margin-bottom: 30px"
@@ -143,15 +144,19 @@ export default defineComponent({
   components: {
 
   },
-
   setup () {
     const leftDrawerOpen = ref(false)
 
     return {
       leftDrawerOpen,
       toggleLeftDrawer () {
-        leftDrawerOpen.value = !leftDrawerOpen.value
+      leftDrawerOpen.value = !leftDrawerOpen.value
       }
+    }
+  },
+  methods: {
+    imgClick() {
+      this.$router.push('/')
     }
   }
 })
