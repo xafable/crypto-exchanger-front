@@ -124,9 +124,6 @@ export default {
   components:{
     QrcodeVue
   },
-  setup() {
-
-  },
   data () {
     return {
       application: {},
@@ -136,7 +133,7 @@ export default {
   methods: {
     async fetchApplication(){
 
-      await fetch('https://exapi.vikarecept.com/api/v1/application/19',{
+      await fetch('https://exapi.vikarecept.com/api/v1/application/' + this.$route.params.id ,{
         method: 'GET',
         headers: {
           'Accept': 'application/json',
