@@ -115,6 +115,19 @@
     </div>
 
 
+
+    <div id="latest" style="background-color: #1D1D1D;margin-top: 150px">
+      <div class="c-container">
+        <div class="row" style="padding-top: 30px">
+          <p class="text-h4 text-white">Latest exchanges</p>
+        </div>
+
+        <LatestExchanges></LatestExchanges>
+      </div>
+    </div>
+
+
+<!--
     <div id="review" style="background-color: #1D1D1D;margin-top: 150px">
       <div class="c-container">
         <FeedbackSlider></FeedbackSlider>
@@ -126,6 +139,7 @@
           </div>
       </div>
     </div>
+-->
 
 
     <div id="contact" style="background-color: #ffffff;position: relative;margin-top: 200px">
@@ -189,11 +203,9 @@ import { defineComponent } from 'vue'
 import { useQuasar } from 'quasar'
 import CryptoExchanger from "components/CryptoExchanger.vue"
 import CoinList from "components/CoinList.vue"
-import FeedbackSlider from "components/FeedbackSlider.vue"
-import FeedbackSend from "components/FeedbackSend.vue"
-
-
-
+//import FeedbackSlider from "components/FeedbackSlider.vue"
+//import FeedbackSend from "components/FeedbackSend.vue"
+import LatestExchanges from "components/LatestExchanges.vue";
 
 
 export default defineComponent({
@@ -206,10 +218,9 @@ export default defineComponent({
     }
   },
   components: {
+    LatestExchanges,
     CryptoExchanger,
     CoinList,
-    FeedbackSlider,
-    FeedbackSend,
   },
   methods: {
     showNotification(message){
