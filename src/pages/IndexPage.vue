@@ -148,16 +148,7 @@
 
           <div class="col-6">
 
-            <p class="text-h5 text-black">Your name:</p>
-            <q-input
-              color="secondary"
-              v-model="text" label="name" />
-            <br><br>
-            <p class="text-h5 text-black">Email or mobile:</p>
-            <q-input
-              color="secondary"
-              v-model="text" label="email or mobile" />
-            <q-btn rounded color="secondary" label="Contact with me"  size="20px" style="margin-top: 40px"/>
+            <TicketSend></TicketSend>
 
           </div>
 
@@ -206,6 +197,7 @@ import CoinList from "components/CoinList.vue"
 //import FeedbackSlider from "components/FeedbackSlider.vue"
 //import FeedbackSend from "components/FeedbackSend.vue"
 import LatestExchanges from "components/LatestExchanges.vue";
+import TicketSend from "components/TicketSend.vue";
 
 
 export default defineComponent({
@@ -218,6 +210,7 @@ export default defineComponent({
     }
   },
   components: {
+    TicketSend,
     LatestExchanges,
     CryptoExchanger,
     CoinList,
