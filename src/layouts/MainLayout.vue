@@ -47,7 +47,7 @@
         <div class="row">
           <div class="col-1"></div>
           <div class="col-4">
-            <p class="text-h4 text-white" style="text-align: center">Services</p>
+            <p class="text-h4 text-white">Services</p>
 
 
             <q-list dense padding class="rounded-borders">
@@ -81,7 +81,7 @@
             <p class="text-h4 text-white" style="text-align: center">Documents</p>
 
 
-            <q-list dense bordered padding class="rounded-borders">
+            <q-list dense  padding class="rounded-borders">
 
               <q-item  v-ripple>
                 <q-item-section>
@@ -112,13 +112,18 @@
             <p class="text-h4 text-white" style="text-align: center"> </p>
 
             <div class="row">
-                <q-btn icon="fa-brands fa-telegram" color="white" stretch flat label="Telegram: @u-swap" />
+                <q-btn icon="fa-brands fa-telegram" color="white" stretch flat label="Telegram: @unlimited" />
             </div>
             <br>
             <div class="row">
-              <q-btn icon="email" color="white" stretch flat label="Email: contact@u-swap.com" />
+              <q-btn icon="email" color="white" stretch flat label="Email: contact@unlimited.com" />
             </div>
+            <br>
+            <div class="row bottom-btn">
 
+              <q-btn  rounded color="secondary" label="Change crypto" />
+
+            </div>
             </div>
 
 
@@ -126,6 +131,19 @@
         </div>
 
 
+
+      </div>
+      <div class="bg-secondary copyright">
+        <div class="cc-container">
+          <div class="row justify-between">
+            <div class="col-5">
+              Copyright © 2017 - {{getCurrentYear()}} - Unlimited | All rights reserved
+            </div>
+            <div class="col-3">
+              Linked to: <a href="https://t.me/" target="_blank" class="t-link"><i class="fab fa-telegram tt-link"></i></a>
+            </div>
+          </div>
+        </div>
       </div>
 
 
@@ -137,6 +155,7 @@
 </template>
 
 <script>
+
 import { defineComponent, ref } from 'vue'
 
 export default defineComponent({
@@ -145,6 +164,7 @@ export default defineComponent({
 
   },
   setup () {
+
     const leftDrawerOpen = ref(false)
 
     return {
@@ -157,7 +177,11 @@ export default defineComponent({
   methods: {
     imgClick() {
       this.$router.push('/')
+    },
+    getCurrentYear(){
+      return new Date().getFullYear();
     }
+
   }
 })
 </script>
@@ -171,4 +195,28 @@ export default defineComponent({
   margin-right: auto;
   margin-left: auto;
 }
+.cc-container {
+  width: 80%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.bottom-btn{
+  margin-left: 25%;
+}
+
+.copyright{
+  padding: 15px;
+  /*min-width: 25px;*/
+}
+
+.t-link{
+  color: inherit;
+  text-decoration: none;
+}
+
+.tt-link{
+  font-size: 15px;
+}
+
 </style>

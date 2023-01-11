@@ -3,12 +3,12 @@
   <p class="text-h5 text-black">Your name:</p>
   <q-input
     color="secondary"
-    v-model="name" label="name" />
+    v-model="Name" label="Name" />
   <br><br>
-  <p class="text-h5 text-black">Your contact(Email, mobile ,telegram etc):</p>
+  <p class="text-h5 text-black">Your contact (Email, mobile ,telegram etc):</p>
   <q-input
     color="secondary"
-    v-model="contact" label="contact" />
+    v-model="Contact" label="Contact" />
   <q-btn @click="sendTicket" rounded color="secondary" label="Contact with me"  size="20px" style="margin-top: 40px"/>
 </div>
 </template>
