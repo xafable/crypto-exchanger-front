@@ -7,6 +7,10 @@ const routes = [
       { path: '', component: () => import('pages/IndexPage.vue') }
     ]
   },
+  {
+    path: '/admin',
+    component: () => import('pages/admin/ExchangesPage.vue'),
+  },
 
   // Always leave this as last one,
   // but you can also remove it
